@@ -7,25 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086053AF2868F66100A66A7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053AE2868F66100A66A7A /* ContentView.swift */; };
+		082D334C2868FABF00DED276 /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D333C2868FABF00DED276 /* TransactionItem.swift */; };
+		082D334D2868FABF00DED276 /* TransationsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D333D2868FABF00DED276 /* TransationsVIew.swift */; };
+		082D334E2868FABF00DED276 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D333E2868FABF00DED276 /* AddButton.swift */; };
+		082D33502868FABF00DED276 /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D33412868FABF00DED276 /* TransactionPresenter.swift */; };
+		082D33512868FABF00DED276 /* TransactionLocalStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D33442868FABF00DED276 /* TransactionLocalStorageMock.swift */; };
+		082D33522868FABF00DED276 /* InjectionInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D33452868FABF00DED276 /* InjectionInit.swift */; };
+		082D33552868FABF00DED276 /* TransactionAddNewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D33492868FABF00DED276 /* TransactionAddNewModal.swift */; };
+		082D33562868FABF00DED276 /* CategoriesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D334A2868FABF00DED276 /* CategoriesMenu.swift */; };
+		082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D334B2868FABF00DED276 /* CategoriesItem.swift */; };
+		082D338F2868FB5C00DED276 /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */; };
 		086053B12868F66100A66A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B02868F66100A66A7A /* Assets.xcassets */; };
 		086053B42868F66100A66A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B32868F66100A66A7A /* Preview Assets.xcassets */; };
 		086053BE2868F66200A66A7A /* TransactionScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053BD2868F66200A66A7A /* TransactionScreenTests.swift */; };
 		086053C82868F66200A66A7A /* TransactionScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053C72868F66200A66A7A /* TransactionScreenUITests.swift */; };
 		086053CA2868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */; };
-		086053E32868F6CE00A66A7A /* TransactionAddNewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */; };
-		086053E42868F6CE00A66A7A /* Mock in Resources */ = {isa = PBXBuildFile; fileRef = 086053D72868F6CE00A66A7A /* Mock */; };
-		086053E52868F6CE00A66A7A /* CategoriesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D82868F6CE00A66A7A /* CategoriesMenu.swift */; };
-		086053E62868F6CE00A66A7A /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D92868F6CE00A66A7A /* TransactionItem.swift */; };
-		086053E72868F6CE00A66A7A /* TransactionLocalStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */; };
-		086053E82868F6CE00A66A7A /* TransationsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DB2868F6CE00A66A7A /* TransationsVIew.swift */; };
-		086053E92868F6CE00A66A7A /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */; };
-		086053EA2868F6CE00A66A7A /* ViewModifier in Resources */ = {isa = PBXBuildFile; fileRef = 086053DD2868F6CE00A66A7A /* ViewModifier */; };
-		086053EB2868F6CE00A66A7A /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DE2868F6CE00A66A7A /* CategoriesItem.swift */; };
-		086053EC2868F6CE00A66A7A /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */; };
-		086053ED2868F6CE00A66A7A /* InjectionInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053E02868F6CE00A66A7A /* InjectionInit.swift */; };
-		086053EE2868F6CE00A66A7A /* Repositories in Resources */ = {isa = PBXBuildFile; fileRef = 086053E12868F6CE00A66A7A /* Repositories */; };
-		086053EF2868F6CE00A66A7A /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053E22868F6CE00A66A7A /* AddButton.swift */; };
 		086053F22868F70100A66A7A /* BudgetPlannerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 086053F12868F70100A66A7A /* BudgetPlannerCore */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		082D333C2868FABF00DED276 /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
+		082D333D2868FABF00DED276 /* TransationsVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransationsVIew.swift; sourceTree = "<group>"; };
+		082D333E2868FABF00DED276 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		082D33412868FABF00DED276 /* TransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
+		082D33442868FABF00DED276 /* TransactionLocalStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionLocalStorageMock.swift; sourceTree = "<group>"; };
+		082D33452868FABF00DED276 /* InjectionInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InjectionInit.swift; sourceTree = "<group>"; };
+		082D33492868FABF00DED276 /* TransactionAddNewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAddNewModal.swift; sourceTree = "<group>"; };
+		082D334A2868FABF00DED276 /* CategoriesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesMenu.swift; sourceTree = "<group>"; };
+		082D334B2868FABF00DED276 /* CategoriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesItem.swift; sourceTree = "<group>"; };
+		082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenApp.swift; sourceTree = "<group>"; };
 		086053A92868F66000A66A7A /* TransactionScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		086053AE2868F66100A66A7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		086053B02868F66100A66A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086053B32868F66100A66A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		086053B92868F66200A66A7A /* TransactionScreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionScreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,19 +61,6 @@
 		086053C32868F66200A66A7A /* TransactionScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086053C72868F66200A66A7A /* TransactionScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITests.swift; sourceTree = "<group>"; };
 		086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionAddNewModal.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionAddNewModal.swift; sourceTree = "<group>"; };
-		086053D72868F6CE00A66A7A /* Mock */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mock; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock; sourceTree = "<group>"; };
-		086053D82868F6CE00A66A7A /* CategoriesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesMenu.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/CategoriesMenu.swift; sourceTree = "<group>"; };
-		086053D92868F6CE00A66A7A /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionItem.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionItem.swift; sourceTree = "<group>"; };
-		086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionLocalStorageMock.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/Repositories/TransactionLocalStorageMock.swift; sourceTree = "<group>"; };
-		086053DB2868F6CE00A66A7A /* TransationsVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransationsVIew.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransationsVIew.swift; sourceTree = "<group>"; };
-		086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionScreenApp.swift; path = ../../../test/TransactionScreen/TransactionScreen/TransactionScreenApp.swift; sourceTree = "<group>"; };
-		086053DD2868F6CE00A66A7A /* ViewModifier */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewModifier; path = ../../../TransactionScreen/Sources/TransactionScreen/ViewModifier; sourceTree = "<group>"; };
-		086053DE2868F6CE00A66A7A /* CategoriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesItem.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/CategoriesItem.swift; sourceTree = "<group>"; };
-		086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionPresenter.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionPresenter.swift; sourceTree = "<group>"; };
-		086053E02868F6CE00A66A7A /* InjectionInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InjectionInit.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/InjectionInit.swift; sourceTree = "<group>"; };
-		086053E12868F6CE00A66A7A /* Repositories */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Repositories; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/Repositories; sourceTree = "<group>"; };
-		086053E22868F6CE00A66A7A /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddButton.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082D33422868FABF00DED276 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				082D33432868FABF00DED276 /* Repositories */,
+				082D33452868FABF00DED276 /* InjectionInit.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		082D33432868FABF00DED276 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				082D33442868FABF00DED276 /* TransactionLocalStorageMock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		086053A02868F66000A66A7A = {
 			isa = PBXGroup;
 			children = (
@@ -120,20 +129,15 @@
 		086053AB2868F66000A66A7A /* TransactionScreen */ = {
 			isa = PBXGroup;
 			children = (
-				086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */,
-				086053AE2868F66100A66A7A /* ContentView.swift */,
-				086053E22868F6CE00A66A7A /* AddButton.swift */,
-				086053DE2868F6CE00A66A7A /* CategoriesItem.swift */,
-				086053D82868F6CE00A66A7A /* CategoriesMenu.swift */,
-				086053E02868F6CE00A66A7A /* InjectionInit.swift */,
-				086053D72868F6CE00A66A7A /* Mock */,
-				086053E12868F6CE00A66A7A /* Repositories */,
-				086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */,
-				086053D92868F6CE00A66A7A /* TransactionItem.swift */,
-				086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */,
-				086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */,
-				086053DB2868F6CE00A66A7A /* TransationsVIew.swift */,
-				086053DD2868F6CE00A66A7A /* ViewModifier */,
+				082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */,
+				082D333E2868FABF00DED276 /* AddButton.swift */,
+				082D334B2868FABF00DED276 /* CategoriesItem.swift */,
+				082D334A2868FABF00DED276 /* CategoriesMenu.swift */,
+				082D33422868FABF00DED276 /* Mock */,
+				082D33492868FABF00DED276 /* TransactionAddNewModal.swift */,
+				082D333C2868FABF00DED276 /* TransactionItem.swift */,
+				082D33412868FABF00DED276 /* TransactionPresenter.swift */,
+				082D333D2868FABF00DED276 /* TransationsVIew.swift */,
 				086053B02868F66100A66A7A /* Assets.xcassets */,
 				086053B22868F66100A66A7A /* Preview Content */,
 			);
@@ -236,6 +240,7 @@
 				TargetAttributes = {
 					086053A82868F66000A66A7A = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					086053B82868F66200A66A7A = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -275,10 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086053EE2868F6CE00A66A7A /* Repositories in Resources */,
-				086053E42868F6CE00A66A7A /* Mock in Resources */,
 				086053B42868F66100A66A7A /* Preview Assets.xcassets in Resources */,
-				086053EA2868F6CE00A66A7A /* ViewModifier in Resources */,
 				086053B12868F66100A66A7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,17 +306,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				086053AF2868F66100A66A7A /* ContentView.swift in Sources */,
-				086053E72868F6CE00A66A7A /* TransactionLocalStorageMock.swift in Sources */,
-				086053EF2868F6CE00A66A7A /* AddButton.swift in Sources */,
-				086053E82868F6CE00A66A7A /* TransationsVIew.swift in Sources */,
-				086053E92868F6CE00A66A7A /* TransactionScreenApp.swift in Sources */,
-				086053E52868F6CE00A66A7A /* CategoriesMenu.swift in Sources */,
-				086053EB2868F6CE00A66A7A /* CategoriesItem.swift in Sources */,
-				086053ED2868F6CE00A66A7A /* InjectionInit.swift in Sources */,
-				086053EC2868F6CE00A66A7A /* TransactionPresenter.swift in Sources */,
-				086053E62868F6CE00A66A7A /* TransactionItem.swift in Sources */,
-				086053E32868F6CE00A66A7A /* TransactionAddNewModal.swift in Sources */,
+				082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */,
+				082D33562868FABF00DED276 /* CategoriesMenu.swift in Sources */,
+				082D334E2868FABF00DED276 /* AddButton.swift in Sources */,
+				082D33522868FABF00DED276 /* InjectionInit.swift in Sources */,
+				082D33512868FABF00DED276 /* TransactionLocalStorageMock.swift in Sources */,
+				082D33502868FABF00DED276 /* TransactionPresenter.swift in Sources */,
+				082D338F2868FB5C00DED276 /* TransactionScreenApp.swift in Sources */,
+				082D334C2868FABF00DED276 /* TransactionItem.swift in Sources */,
+				082D334D2868FABF00DED276 /* TransationsVIew.swift in Sources */,
+				082D33552868FABF00DED276 /* TransactionAddNewModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TransactionScreen/Preview Content\"";
@@ -489,6 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.montenegrodeveloper.TransactionScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -499,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TransactionScreen/Preview Content\"";
