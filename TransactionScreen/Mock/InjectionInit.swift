@@ -38,7 +38,7 @@ class MockTransactionRepository: RepositoryProtocol {
     var values: [TransactionDTO] = [
         .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
         .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
-        .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world")
+        .init(with: 12, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie, description: "hello world")
     ]
 
     public init() {}
@@ -64,5 +64,16 @@ class MockTransactionRepository: RepositoryProtocol {
     func erase() {
         values.removeAll()
         publisher.send(values)
+    }
+    
+    func filterByDate() -> [String:[TransactionDTO]]  {
+        [
+            "12/01/2022" : [ .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ],
+            "13/01/2022" : [ .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ]
+        ]
     }
 }

@@ -31,15 +31,20 @@ class TransactionPresenter: ObservableObject {
         repository.remove(transaction)
     }
 
-    
-    
     func mapToViewModel(list: [TransactionDTO]) -> [TransactionViewModel] {
-        var result: [TransactionViewModel] = []
-        let dates = list.map(\.date)
-        dates.forEach { date in
-            let transactionAtThisDate = list.filter { transaction in
-                transaction.date == date
-            }.map { transaction in
+        var compute: [String: [TransactionDTO]] = [:]
+        let result :[TransactionViewModel]
+
+        list.forEach { i in
+            compute[i.date.toString()] = []
+        }
+
+        list.forEach { transaction in
+            compute[transaction.date.toString()]?.append(transaction)
+        }
+
+        result = compute.map { (key: String, value: [TransactionDTO]) -> TransactionViewModel in
+            let transactions = value.map { transaction in
                 TransactionItemModel(
                     Title: transaction.description!,
                     subtitle: transaction.description!,
@@ -49,8 +54,10 @@ class TransactionPresenter: ObservableObject {
                     amountColor: transaction.categorie.color.color
                 )
             }
-            result.append(TransactionViewModel(date: "\(date)", transactions: transactionAtThisDate))
+
+            return TransactionViewModel(date: key, transactions: transactions)
         }
+        
         return result
     }
 }
