@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086053AD2868F66100A66A7A /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053AC2868F66100A66A7A /* TransactionScreenApp.swift */; };
 		086053AF2868F66100A66A7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053AE2868F66100A66A7A /* ContentView.swift */; };
 		086053B12868F66100A66A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B02868F66100A66A7A /* Assets.xcassets */; };
 		086053B42868F66100A66A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B32868F66100A66A7A /* Preview Assets.xcassets */; };
 		086053BE2868F66200A66A7A /* TransactionScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053BD2868F66200A66A7A /* TransactionScreenTests.swift */; };
 		086053C82868F66200A66A7A /* TransactionScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053C72868F66200A66A7A /* TransactionScreenUITests.swift */; };
 		086053CA2868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */; };
+		086053E32868F6CE00A66A7A /* TransactionAddNewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */; };
+		086053E42868F6CE00A66A7A /* Mock in Resources */ = {isa = PBXBuildFile; fileRef = 086053D72868F6CE00A66A7A /* Mock */; };
+		086053E52868F6CE00A66A7A /* CategoriesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D82868F6CE00A66A7A /* CategoriesMenu.swift */; };
+		086053E62868F6CE00A66A7A /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053D92868F6CE00A66A7A /* TransactionItem.swift */; };
+		086053E72868F6CE00A66A7A /* TransactionLocalStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */; };
+		086053E82868F6CE00A66A7A /* TransationsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DB2868F6CE00A66A7A /* TransationsVIew.swift */; };
+		086053E92868F6CE00A66A7A /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */; };
+		086053EA2868F6CE00A66A7A /* ViewModifier in Resources */ = {isa = PBXBuildFile; fileRef = 086053DD2868F6CE00A66A7A /* ViewModifier */; };
+		086053EB2868F6CE00A66A7A /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DE2868F6CE00A66A7A /* CategoriesItem.swift */; };
+		086053EC2868F6CE00A66A7A /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */; };
+		086053ED2868F6CE00A66A7A /* InjectionInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053E02868F6CE00A66A7A /* InjectionInit.swift */; };
+		086053EE2868F6CE00A66A7A /* Repositories in Resources */ = {isa = PBXBuildFile; fileRef = 086053E12868F6CE00A66A7A /* Repositories */; };
+		086053EF2868F6CE00A66A7A /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053E22868F6CE00A66A7A /* AddButton.swift */; };
+		086053F22868F70100A66A7A /* BudgetPlannerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 086053F12868F70100A66A7A /* BudgetPlannerCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		086053A92868F66000A66A7A /* TransactionScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		086053AC2868F66100A66A7A /* TransactionScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenApp.swift; sourceTree = "<group>"; };
 		086053AE2868F66100A66A7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		086053B02868F66100A66A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086053B32868F66100A66A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +56,19 @@
 		086053C32868F66200A66A7A /* TransactionScreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionScreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086053C72868F66200A66A7A /* TransactionScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITests.swift; sourceTree = "<group>"; };
 		086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionAddNewModal.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionAddNewModal.swift; sourceTree = "<group>"; };
+		086053D72868F6CE00A66A7A /* Mock */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Mock; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock; sourceTree = "<group>"; };
+		086053D82868F6CE00A66A7A /* CategoriesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesMenu.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/CategoriesMenu.swift; sourceTree = "<group>"; };
+		086053D92868F6CE00A66A7A /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionItem.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionItem.swift; sourceTree = "<group>"; };
+		086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionLocalStorageMock.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/Repositories/TransactionLocalStorageMock.swift; sourceTree = "<group>"; };
+		086053DB2868F6CE00A66A7A /* TransationsVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransationsVIew.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransationsVIew.swift; sourceTree = "<group>"; };
+		086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionScreenApp.swift; path = ../../../test/TransactionScreen/TransactionScreen/TransactionScreenApp.swift; sourceTree = "<group>"; };
+		086053DD2868F6CE00A66A7A /* ViewModifier */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ViewModifier; path = ../../../TransactionScreen/Sources/TransactionScreen/ViewModifier; sourceTree = "<group>"; };
+		086053DE2868F6CE00A66A7A /* CategoriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoriesItem.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/CategoriesItem.swift; sourceTree = "<group>"; };
+		086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionPresenter.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/TransactionPresenter.swift; sourceTree = "<group>"; };
+		086053E02868F6CE00A66A7A /* InjectionInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InjectionInit.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/InjectionInit.swift; sourceTree = "<group>"; };
+		086053E12868F6CE00A66A7A /* Repositories */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Repositories; path = ../../../TransactionScreen/Sources/TransactionScreen/Mock/Repositories; sourceTree = "<group>"; };
+		086053E22868F6CE00A66A7A /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddButton.swift; path = ../../../TransactionScreen/Sources/TransactionScreen/AddButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086053F22868F70100A66A7A /* BudgetPlannerCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +120,20 @@
 		086053AB2868F66000A66A7A /* TransactionScreen */ = {
 			isa = PBXGroup;
 			children = (
-				086053AC2868F66100A66A7A /* TransactionScreenApp.swift */,
+				086053DF2868F6CE00A66A7A /* TransactionPresenter.swift */,
 				086053AE2868F66100A66A7A /* ContentView.swift */,
+				086053E22868F6CE00A66A7A /* AddButton.swift */,
+				086053DE2868F6CE00A66A7A /* CategoriesItem.swift */,
+				086053D82868F6CE00A66A7A /* CategoriesMenu.swift */,
+				086053E02868F6CE00A66A7A /* InjectionInit.swift */,
+				086053D72868F6CE00A66A7A /* Mock */,
+				086053E12868F6CE00A66A7A /* Repositories */,
+				086053D62868F6CE00A66A7A /* TransactionAddNewModal.swift */,
+				086053D92868F6CE00A66A7A /* TransactionItem.swift */,
+				086053DA2868F6CE00A66A7A /* TransactionLocalStorageMock.swift */,
+				086053DC2868F6CE00A66A7A /* TransactionScreenApp.swift */,
+				086053DB2868F6CE00A66A7A /* TransationsVIew.swift */,
+				086053DD2868F6CE00A66A7A /* ViewModifier */,
 				086053B02868F66100A66A7A /* Assets.xcassets */,
 				086053B22868F66100A66A7A /* Preview Content */,
 			);
@@ -143,6 +181,9 @@
 			dependencies = (
 			);
 			name = TransactionScreen;
+			packageProductDependencies = (
+				086053F12868F70100A66A7A /* BudgetPlannerCore */,
+			);
 			productName = TransactionScreen;
 			productReference = 086053A92868F66000A66A7A /* TransactionScreen.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +256,9 @@
 				Base,
 			);
 			mainGroup = 086053A02868F66000A66A7A;
+			packageReferences = (
+				086053F02868F70100A66A7A /* XCRemoteSwiftPackageReference "BudgetPlannerCore" */,
+			);
 			productRefGroup = 086053AA2868F66000A66A7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086053EE2868F6CE00A66A7A /* Repositories in Resources */,
+				086053E42868F6CE00A66A7A /* Mock in Resources */,
 				086053B42868F66100A66A7A /* Preview Assets.xcassets in Resources */,
+				086053EA2868F6CE00A66A7A /* ViewModifier in Resources */,
 				086053B12868F66100A66A7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				086053AF2868F66100A66A7A /* ContentView.swift in Sources */,
-				086053AD2868F66100A66A7A /* TransactionScreenApp.swift in Sources */,
+				086053E72868F6CE00A66A7A /* TransactionLocalStorageMock.swift in Sources */,
+				086053EF2868F6CE00A66A7A /* AddButton.swift in Sources */,
+				086053E82868F6CE00A66A7A /* TransationsVIew.swift in Sources */,
+				086053E92868F6CE00A66A7A /* TransactionScreenApp.swift in Sources */,
+				086053E52868F6CE00A66A7A /* CategoriesMenu.swift in Sources */,
+				086053EB2868F6CE00A66A7A /* CategoriesItem.swift in Sources */,
+				086053ED2868F6CE00A66A7A /* InjectionInit.swift in Sources */,
+				086053EC2868F6CE00A66A7A /* TransactionPresenter.swift in Sources */,
+				086053E62868F6CE00A66A7A /* TransactionItem.swift in Sources */,
+				086053E32868F6CE00A66A7A /* TransactionAddNewModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		086053F02868F70100A66A7A /* XCRemoteSwiftPackageReference "BudgetPlannerCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eldinsmakic/BudgetPlannerCore.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		086053F12868F70100A66A7A /* BudgetPlannerCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 086053F02868F70100A66A7A /* XCRemoteSwiftPackageReference "BudgetPlannerCore" */;
+			productName = BudgetPlannerCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 086053A12868F66000A66A7A /* Project object */;
 }
