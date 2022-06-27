@@ -12,7 +12,6 @@ import SwiftUI
 
 class TransactionPresenter: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
-    private let transactionManager = TransactionManager()
 
     @Published var list: [TransactionViewModel] = []
 
@@ -22,13 +21,10 @@ class TransactionPresenter: ObservableObject {
 
     func fetch () {
         repository.fetch()
-        transactionManager.fetch()
     }
 
     func onDelete(at offsets: IndexSet) {
-//        let transaction = list[offsets.first!]
-        let transaction = transactionManager.list[offsets.first!]
-        repository.remove(transaction)
+//        list.remove(atOffsets: <#T##IndexSet#>)
     }
 
     func mapToViewModel(list: [TransactionDTO]) -> [TransactionViewModel] {
@@ -50,8 +46,9 @@ class TransactionPresenter: ObservableObject {
                     subtitle: transaction.description,
                     date: transaction.date,
                     amount: "\(transaction.montant) $",
+                    amountColor: transaction.categorie.type == .depense ? Color.red : Color.green,
                     image: transaction.categorie.image,
-                    amountColor: transaction.categorie.color.color
+                    imageColor: transaction.categorie.color.color
                 )
             }
 
