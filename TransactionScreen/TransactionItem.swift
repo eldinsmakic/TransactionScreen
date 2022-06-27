@@ -21,9 +21,10 @@ struct TransactionItem: View {
 
     var body: some View {
         HStack {
-            Image(model.image)
+            Image(systemName: model.image)
                 .resizable()
                 .frame(width: 36, height: 36)
+                .foregroundColor(model.amountColor)
             VStack(alignment: .leading) {
                 HStack {
                     Text(model.Title)
@@ -48,7 +49,7 @@ struct TransactionItem_Previews: PreviewProvider {
         subtitle: "Anne anniversary",
         date: Date(),
         amount: "-30$",
-        image: "exampleTransaction",
+        image: "star.fill",
         amountColor: Color.red
     )
 
