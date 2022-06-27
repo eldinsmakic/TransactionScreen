@@ -32,7 +32,7 @@ class InjectionInit {
 
 private let categorie = CategorieDTO(name: "Course", image: "star.fill", type: .depense, color: .blue)
 private let categorie2 = CategorieDTO(name: "Car", image: "car", type: .depense, color: .red)
-private let categorie3 = CategorieDTO(name: "Freelance", image: "creditcard.fill", type: .depense, color: .green)
+private let categorie3 = CategorieDTO(name: "Freelance", image: "creditcard.fill", type: .revenue, color: .green)
 
 class MockTransactionRepository: RepositoryProtocol {
     var publisher = PassthroughSubject<[TransactionDTO], Never>()
