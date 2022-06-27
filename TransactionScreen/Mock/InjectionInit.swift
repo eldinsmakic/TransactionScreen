@@ -30,15 +30,15 @@ class InjectionInit {
     }
 }
 
-private let categorie = CategorieDTO(name: "Course", image: "img", type: .depense, color: .blue)
+private let categorie = CategorieDTO(name: "Course", image: "star.fill", type: .depense, color: .blue)
 
 class MockTransactionRepository: RepositoryProtocol {
     var publisher = PassthroughSubject<[TransactionDTO], Never>()
     
     var values: [TransactionDTO] = [
-        .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
-        .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
-        .init(with: 12, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie, description: "hello world")
+        .init(title: "Pizza Hut", with: 100, onDate: .now, withCategorie: categorie, description: "Plaisir du mardi"),
+        .init(title: "Auchan", with: 10, onDate: .now, withCategorie: categorie, description: "Course du mecredi"),
+        .init(title: "Essence", with: 12, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie, description: "PLein du mois")
     ]
 
     public init() {}
@@ -68,12 +68,12 @@ class MockTransactionRepository: RepositoryProtocol {
     
     func filterByDate() -> [String:[TransactionDTO]]  {
         [
-            "12/01/2022" : [ .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
-                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
-                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ],
-            "13/01/2022" : [ .init(with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
-                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
-                             .init(with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ]
+            "12/01/2022" : [ .init(title: "", with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(title: "", with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(title: "", with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ],
+            "13/01/2022" : [ .init(title: "", with: 100, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(title: "", with: 10, onDate: .now, withCategorie: categorie, description: "hello world"),
+                             .init(title: "", with: 10, onDate: .now, withCategorie: categorie, description: "hello world") ]
         ]
     }
 }
