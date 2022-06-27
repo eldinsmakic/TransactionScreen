@@ -31,6 +31,8 @@ class InjectionInit {
 }
 
 private let categorie = CategorieDTO(name: "Course", image: "star.fill", type: .depense, color: .blue)
+private let categorie2 = CategorieDTO(name: "Car", image: "car", type: .depense, color: .red)
+private let categorie3 = CategorieDTO(name: "Freelance", image: "creditcard.fill", type: .depense, color: .green)
 
 class MockTransactionRepository: RepositoryProtocol {
     var publisher = PassthroughSubject<[TransactionDTO], Never>()
@@ -38,7 +40,9 @@ class MockTransactionRepository: RepositoryProtocol {
     var values: [TransactionDTO] = [
         .init(title: "Pizza Hut", with: 100, onDate: .now, withCategorie: categorie, description: "Plaisir du mardi"),
         .init(title: "Auchan", with: 10, onDate: .now, withCategorie: categorie, description: "Course du mecredi"),
-        .init(title: "Essence", with: 12, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie, description: "PLein du mois")
+        .init(title: "Essence", with: 12, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie, description: "Plein du mois"),
+        .init(title: "Salaire", with: 1200, onDate: (Date() + 1.days.timeInterval), withCategorie: categorie3, description: ""),
+        .init(title: "Voiture", with: 300, onDate: (Date() - 3.days.timeInterval), withCategorie: categorie2, description: "")
     ]
 
     public init() {}
