@@ -46,19 +46,32 @@ class TransactionPresenter: ObservableObject {
         result = compute.map { (key: String, value: [TransactionDTO]) -> TransactionViewModel in
             let transactions = value.map { transaction in
                 TransactionItemModel(
-                    Title: transaction.description!,
-                    subtitle: transaction.description!,
+                    Title: transaction.title,
+                    subtitle: transaction.description,
                     date: transaction.date,
-                    amount: "\(transaction.montant)",
+                    amount: "\(transaction.montant) $",
                     image: transaction.categorie.image,
                     amountColor: transaction.categorie.color.color
                 )
             }
 
-            return TransactionViewModel(date: key, transactions: transactions)
+            return TransactionViewModel(date: transactions[0].date.toFormatDate, transactions: transactions)
         }
         
         return result
+    }
+}
+
+extension Date {
+    private var format: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.setLocalizedDateFormatFromTemplate("MMMMd")
+        return formatter
+    }
+
+    var toFormatDate: String {
+        self.isToday ? "Today" : format.string(from: self)
     }
 }
 
