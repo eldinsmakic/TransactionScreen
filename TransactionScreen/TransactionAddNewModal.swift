@@ -10,6 +10,7 @@ import BudgetPlannerCore
 
 struct TransactionAddNewModal: View {
     @State var title: String = ""
+    @State var description: String = ""
     @State var amount: Decimal?
     @State var date = Date()
     @State var categorie: CategorieDTO?
@@ -20,8 +21,10 @@ struct TransactionAddNewModal: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            TextField("Label", text: $title)
+            TextField("Title", text: $title)
                     .multilineTextAlignment(.center)
+            TextField("Description", text: $description)
+                .multilineTextAlignment(.center)
             CategoriesMenu(selectedElement: $categorie)
             HStack {
                 Spacer()
@@ -34,8 +37,20 @@ struct TransactionAddNewModal: View {
             }).multilineTextAlignment(.center)
                 
             Button {
+                guard !title.isEmpty,
+                      let amount = amount,
+                      let categorie = categorie else {
+                    return
+                }
+
                 let transaction = TransactionDTO(
-                    with: amount ?? 0, onDate: date, withCategorie: categorie!, description: title)
+                    title: title,
+                    with: amount,
+                    onDate: date,
+                    withCategorie: categorie,
+                    description: description
+                )
+
                 transactionManager.add(transaction: transaction)
                 isModalActivated = false
             } label: {
