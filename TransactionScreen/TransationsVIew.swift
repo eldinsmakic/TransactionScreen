@@ -9,7 +9,7 @@ import SwiftUI
 import BudgetPlannerCore
 
 struct TransationsView: View {
-    @StateObject private var transactionPresenter = TransactionPresenter()
+    @StateObject private var presenter = TransactionPresenter()
     @State var list: [TransactionViewModel] = []
     
     @State var isModalActivated = false
