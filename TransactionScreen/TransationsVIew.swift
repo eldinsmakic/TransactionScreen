@@ -23,18 +23,17 @@ struct TransationsView: View {
                     .fontWeight(.bold)
                 Spacer()
             }
-            ForEach(list) { element in
-                Section {
-                    Text(element.date)
-                        .font(.headline)
+            List {
+                ForEach(presenter.list) { element in
+                    Section(header: Text(element.date)
+                        .font(.headline)) {
+                        ForEach(element.transactions) { transaction in
+                            TransactionItem(
+                                model: transaction
+                            )
+                        }.onDelete(perform: presenter.onDelete(at:))
+                    }
                 }
-                List {
-                    ForEach(element.transactions) { transaction in
-                        TransactionItem(
-                            model: transaction
-                        )
-                    }.onDelete(perform: transactionPresenter.onDelete(at:))
-                }.listStyle(.inset)
             }
         }.toolbar(content: {
             EditButton()
@@ -50,9 +49,11 @@ struct TransationsView: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             }
             .onAppear(perform: {
-                transactionPresenter.fetch()
+                presenter.fetch()
+                        // Set the default to clear
+                UITableView.appearance().backgroundColor = .clear
             })
-            .onReceive(self.transactionPresenter.$list, perform: { values in
+            .onReceive(presenter.$list, perform: { values in
                 self.list = values
             })
             .addAddButton {
