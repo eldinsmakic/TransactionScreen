@@ -8,12 +8,41 @@
 import SwiftUI
 import BudgetPlannerCore
 
+class CategeriesMenuPresenter: ObservableObject {
+    @Injected var repository: AnyRepository<CategorieDTO>
+    
+    @Published public var list: [CategorieDTO] = []
+
+    public init() {
+        self.repository.model.assign(to: &self.$list)
+    }
+
+    public func add(categorie: CategorieDTO) {
+        repository.add(categorie)
+    }
+
+    public func getCategories(ofType type: CategorieType) -> [CategorieDTO] {
+        list.filter { categories in categories.type == type }
+    }
+
+    public func erase() {
+        repository.erase()
+    }
+
+    public func fetch() {
+        repository.fetch()
+    }
+
+    public func remove(categorie: CategorieDTO) {
+        repository.remove(categorie)
+    }
+}
+
 struct CategoriesMenu: View {
     
     @Binding var selectedElement: CategorieDTO?
     @State var isPresented = false
-    
-    @StateObject var categorieManager = CategoriesManager()
+    @StateObject var presenter = CategeriesMenuPresenter()
 
     var body: some View {
         view(selectedElement: selectedElement)
@@ -21,7 +50,7 @@ struct CategoriesMenu: View {
                 isPresented = true
             }
             .popover(isPresented: $isPresented) {
-                ForEach(categorieManager.list) { categorie in
+                ForEach(presenter.list) { categorie in
                     Button {
                         selectedElement = categorie
                         isPresented = false
@@ -31,7 +60,7 @@ struct CategoriesMenu: View {
                 }.padding()
             }
             .onAppear {
-                categorieManager.fetch()
+                presenter.fetch()
             }
     }
 
