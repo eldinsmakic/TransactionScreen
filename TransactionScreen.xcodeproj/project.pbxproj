@@ -17,6 +17,8 @@
 		082D33562868FABF00DED276 /* CategoriesMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D334A2868FABF00DED276 /* CategoriesMenu.swift */; };
 		082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D334B2868FABF00DED276 /* CategoriesItem.swift */; };
 		082D338F2868FB5C00DED276 /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */; };
+		0859803C286A535600ED8B4C /* MockTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859803B286A535600ED8B4C /* MockTransactionRepository.swift */; };
+		0859803E286A53AC00ED8B4C /* MockCategorieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0859803D286A53AC00ED8B4C /* MockCategorieRepository.swift */; };
 		086053B12868F66100A66A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B02868F66100A66A7A /* Assets.xcassets */; };
 		086053B42868F66100A66A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086053B32868F66100A66A7A /* Preview Assets.xcassets */; };
 		086053BE2868F66200A66A7A /* TransactionScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053BD2868F66200A66A7A /* TransactionScreenTests.swift */; };
@@ -53,6 +55,8 @@
 		082D334A2868FABF00DED276 /* CategoriesMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesMenu.swift; sourceTree = "<group>"; };
 		082D334B2868FABF00DED276 /* CategoriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesItem.swift; sourceTree = "<group>"; };
 		082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenApp.swift; sourceTree = "<group>"; };
+		0859803B286A535600ED8B4C /* MockTransactionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionRepository.swift; sourceTree = "<group>"; };
+		0859803D286A53AC00ED8B4C /* MockCategorieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategorieRepository.swift; sourceTree = "<group>"; };
 		086053A92868F66000A66A7A /* TransactionScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086053B02868F66100A66A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		086053B32868F66100A66A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				082D33442868FABF00DED276 /* TransactionLocalStorageMock.swift */,
+				0859803B286A535600ED8B4C /* MockTransactionRepository.swift */,
+				0859803D286A53AC00ED8B4C /* MockCategorieRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -306,10 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0859803C286A535600ED8B4C /* MockTransactionRepository.swift in Sources */,
 				082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */,
 				082D33562868FABF00DED276 /* CategoriesMenu.swift in Sources */,
 				082D334E2868FABF00DED276 /* AddButton.swift in Sources */,
 				082D33522868FABF00DED276 /* InjectionInit.swift in Sources */,
+				0859803E286A53AC00ED8B4C /* MockCategorieRepository.swift in Sources */,
 				082D33512868FABF00DED276 /* TransactionLocalStorageMock.swift in Sources */,
 				082D33502868FABF00DED276 /* TransactionPresenter.swift in Sources */,
 				082D338F2868FB5C00DED276 /* TransactionScreenApp.swift in Sources */,

@@ -10,21 +10,30 @@ import BudgetPlannerCore
 import Foundation
 import SwiftUI
 
-class TransactionPresenter: ObservableObject {
+final class TransactionPresenter: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
 
     @Published var list: [TransactionViewModel] = []
 
+    var cancelable = Set<AnyCancellable>() 
+
     init() {
         repository.model.map(self.mapToViewModel(list:)).assign(to: &$list)
+        $list.sink { value in
+            print("HHH \(value)")
+        }.store(in: &cancelable)
     }
 
     func fetch () {
         repository.fetch()
     }
 
+    func add(_ dto: TransactionDTO) {
+        repository.add(dto)
+    }
+
     func onDelete(at offsets: IndexSet) {
-//        list.remove(atOffsets: <#T##IndexSet#>)
+        repository.delete(offsets)
     }
 
     func mapToViewModel(list: [TransactionDTO]) -> [TransactionViewModel] {
@@ -32,11 +41,11 @@ class TransactionPresenter: ObservableObject {
         let result :[TransactionViewModel]
 
         list.forEach { i in
-            compute[i.date.toString()] = []
+            compute[i.date.toKey] = []
         }
 
         list.forEach { transaction in
-            compute[transaction.date.toString()]?.append(transaction)
+            compute[transaction.date.toKey]?.append(transaction)
         }
 
         result = compute.map { (key: String, value: [TransactionDTO]) -> TransactionViewModel in
@@ -69,6 +78,14 @@ extension Date {
 
     var toFormatDate: String {
         self.isToday ? "Today" : format.string(from: self)
+    }
+
+    var toKey: String {
+//        format.setLocalizedDateFormatFromTemplate("DD/MM/YY")
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "dd/MM/YY"
+        return formatter.string(from: self)
     }
 }
 

@@ -9,10 +9,9 @@ import SwiftUI
 import BudgetPlannerCore
 
 struct TransationsView: View {
-    @StateObject private var presenter = TransactionPresenter()
-    @State var list: [TransactionViewModel] = []
-    
-    @State var isModalActivated = false
+    @ObservedObject var presenter: TransactionPresenter
+
+    @State private var isModalActivated = false
     @State private var editMode = EditMode.inactive
     
     var body: some View {
@@ -44,18 +43,15 @@ struct TransationsView: View {
                 isPresented: $isModalActivated,
                 onDismiss: {}
             ) {
-                TransactionAddNewModal(isModalActivated: $isModalActivated)
+                TransactionAddNewModal(isModalActivated: $isModalActivated, presenter: presenter)
                     .background(.white)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             }
-            .onAppear(perform: {
+            .onAppear{
                 presenter.fetch()
                         // Set the default to clear
                 UITableView.appearance().backgroundColor = .clear
-            })
-            .onReceive(presenter.$list, perform: { values in
-                self.list = values
-            })
+            }
             .addAddButton {
                 self.isModalActivated = true
             }
@@ -65,7 +61,7 @@ struct TransationsView: View {
 struct TransationsVIew_Previews: PreviewProvider {
     static var injection = InjectionInit()
     static var previews: some View {
-        TransationsView()
+        TransationsView(presenter: .init())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

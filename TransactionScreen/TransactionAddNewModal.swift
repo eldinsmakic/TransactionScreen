@@ -16,9 +16,9 @@ struct TransactionAddNewModal: View {
     @State var categorie: CategorieDTO?
     
     @Binding var isModalActivated: Bool
-    
-    private let transactionManager = TransactionManager()
-    
+
+    @ObservedObject var presenter: TransactionPresenter
+
     var body: some View {
         VStack(alignment: .center) {
             TextField("Title", text: $title)
@@ -50,8 +50,7 @@ struct TransactionAddNewModal: View {
                     withCategorie: categorie,
                     description: description
                 )
-
-                transactionManager.add(transaction: transaction)
+                presenter.add(transaction)
                 isModalActivated = false
             } label: {
                 Text("Validate")
@@ -67,7 +66,8 @@ struct TransactionAddNewModal: View {
 
 struct TransactionAddNewModal_Previews: PreviewProvider {
     @State static var isModalActivated = false
+    @State static var presenter = TransactionPresenter()
     static var previews: some View {
-        TransactionAddNewModal(isModalActivated: $isModalActivated)
+        TransactionAddNewModal(isModalActivated: $isModalActivated, presenter: presenter)
     }
 }
