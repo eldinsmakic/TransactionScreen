@@ -16,7 +16,10 @@ struct CategoriesItem: View {
             Image(systemName: categorie.image)
                 .resizable()
                 .frame(width: 46, height: 46, alignment: .center)
-                .foregroundColor(categorie.color.color)
+                .padding(20)
+                .foregroundColor(.white)
+                .background(categorie.color.color)
+                .clipShape(Circle())
             VStack {
                 Text(categorie.name)
                     .font(.headline)
@@ -29,7 +32,7 @@ struct CategoriesItem: View {
 }
 
 struct CategoriesItem_Previews: PreviewProvider {
-    @State static var categorie = CategorieDTO(name: "Essence", image: "fuelpump.circle.fill", type: .depense, color: .red)
+    @State static var categorie = CategorieDTO(name: "Essence", image: "car", type: .depense, color: .red)
 
     static var previews: some View {
         CategoriesItem(categorie: categorie)

@@ -25,7 +25,10 @@ struct TransactionItem: View {
             Image(systemName: model.image)
                 .resizable()
                 .frame(width: 36, height: 36)
-                .foregroundColor(model.imageColor)
+                .padding(14)
+                .foregroundColor(.white)
+                .background(model.imageColor)
+                .clipShape(Circle())
             VStack(alignment: .leading) {
                 HStack {
                     Text(model.Title)
