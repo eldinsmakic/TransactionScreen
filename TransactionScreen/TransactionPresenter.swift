@@ -19,9 +19,6 @@ final class TransactionPresenter: ObservableObject {
 
     init() {
         repository.model.map(self.mapToViewModel(list:)).assign(to: &$list)
-        $list.sink { value in
-            print("HHH \(value)")
-        }.store(in: &cancelable)
     }
 
     func fetch () {
@@ -61,10 +58,12 @@ final class TransactionPresenter: ObservableObject {
                 )
             }
 
-            return TransactionViewModel(date: transactions[0].date.toFormatDate, transactions: transactions)
+            return TransactionViewModel(date: transactions[0].date, transactions: transactions)
         }
-        
-        return result
+
+        return result.sorted { transactionOne, transactionTwo in
+            transactionOne.date < transactionTwo.date
+        }
     }
 }
 
@@ -91,7 +90,7 @@ extension Date {
 
 struct TransactionViewModel: Identifiable {
     var id = UUID()
-    var date: String
+    var date: Date
     var transactions: [TransactionItemModel]
 }
 

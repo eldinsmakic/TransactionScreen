@@ -24,7 +24,7 @@ struct TransationsView: View {
             }
             List {
                 ForEach(presenter.list) { element in
-                    Section(header: Text(element.date)
+                    Section(header: Text(element.date.toFormatDate)
                         .font(.headline)) {
                         ForEach(element.transactions) { transaction in
                             TransactionItem(
