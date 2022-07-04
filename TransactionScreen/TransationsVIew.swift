@@ -24,14 +24,15 @@ struct TransationsView: View {
             }
             List {
                 ForEach(presenter.list) { element in
-                    Section(header: Text(element.date.toFormatDate)
-                        .font(.headline)) {
+                    Section(content: {
                         ForEach(element.transactions) { transaction in
                             TransactionItem(
                                 model: transaction
                             )
                         }.onDelete(perform: presenter.onDelete(at:))
-                    }
+                    }, header: {
+                        Header(date: element.date, amout: element.total)
+                    })
                 }
             }
         }.toolbar(content: {

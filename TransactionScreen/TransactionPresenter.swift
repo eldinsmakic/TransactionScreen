@@ -58,12 +58,22 @@ final class TransactionPresenter: ObservableObject {
                 )
             }
 
-            return TransactionViewModel(date: transactions[0].date, transactions: transactions)
+            let negatif = value.filter { $0.categorie.type == .depense }.map(\.montant)
+            let positif = value.filter { $0.categorie.type == .revenue }.map(\.montant)
+            let total = negatif.reduce(0,-) + positif.reduce(0,+)
+
+            return TransactionViewModel(date: transactions[0].date, total: NSNumber(value: total.doubleValue) , transactions: transactions)
         }
 
         return result.sorted { transactionOne, transactionTwo in
             transactionOne.date < transactionTwo.date
         }
+    }
+}
+
+extension Decimal {
+    var doubleValue:Double {
+        return NSDecimalNumber(decimal:self).doubleValue
     }
 }
 
@@ -91,6 +101,7 @@ extension Date {
 struct TransactionViewModel: Identifiable {
     var id = UUID()
     var date: Date
+    var total: NSNumber
     var transactions: [TransactionItemModel]
 }
 
