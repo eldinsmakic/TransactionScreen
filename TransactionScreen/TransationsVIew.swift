@@ -13,7 +13,8 @@ struct TransationsView: View {
 
     @State private var isModalActivated = false
     @State private var editMode = EditMode.inactive
-    @State private var filterCategorie: CategorieDTO?
+    @State private var filterByCategorie: CategorieDTO?
+    @State private var filterByDate: Date? = .now
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -29,17 +30,29 @@ struct TransationsView: View {
                 HStack {
                     VStack {
                         Text("by Categories")
-                        CategoriesMenuFilter(selectedElement: $filterCategorie)
+                        CategoriesMenuFilter(selectedElement: $filterByCategorie)
+                    }
+                    VStack {
+                        Text("by Date")
+                        DatesMenuFilter(date: $filterByDate)
                     }
                 }
-            }.onChange(of: filterCategorie) { newValue in
+            }.onChange(of: filterByCategorie) { newValue in
                 guard let value = newValue else {
                     presenter.removeFilter()
                     return
                 }
 
                 presenter.filter(by: value)
-            }
+            }.onChange(of: filterByDate, perform: { newValue in
+                guard let value = newValue else {
+                    presenter.removeFilter()
+                    return
+                }
+
+                presenter.filter(by: value)
+            })
+            .padding()
             List {
                 ForEach(presenter.list) { element in
                     Section(content: {
