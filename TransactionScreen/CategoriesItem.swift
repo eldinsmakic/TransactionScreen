@@ -11,11 +11,24 @@ import BudgetPlannerCore
 struct CategoriesItem: View {
     let categorie: CategorieDTO
     
+    let width: CGFloat
+    let height: CGFloat
+    
+    init(
+        categorie: CategorieDTO,
+        width: CGFloat = 46,
+        height: CGFloat = 46
+    ) {
+        self.categorie = categorie
+        self.width = width
+        self.height = height
+    }
+    
     var body: some View {
         HStack {
             Image(systemName: categorie.image)
                 .resizable()
-                .frame(width: 46, height: 46, alignment: .center)
+                .frame(width: width, height: height, alignment: .center)
                 .padding(20)
                 .foregroundColor(.white)
                 .background(categorie.color.color)
