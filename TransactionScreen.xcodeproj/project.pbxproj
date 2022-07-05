@@ -27,6 +27,8 @@
 		086053F22868F70100A66A7A /* BudgetPlannerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 086053F12868F70100A66A7A /* BudgetPlannerCore */; };
 		08E7268C28739AD10056D711 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7268B28739AD10056D711 /* Header.swift */; };
 		08E726902874E8540056D711 /* CategoriesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */; };
+		08E726922874EE530056D711 /* DatesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E726912874EE530056D711 /* DatesMenuFilter.swift */; };
+		08E726962874EFA10056D711 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E726952874EFA10056D711 /* ClearButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08E7268B28739AD10056D711 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuFilter.swift; sourceTree = "<group>"; };
+		08E726912874EE530056D711 /* DatesMenuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesMenuFilter.swift; sourceTree = "<group>"; };
+		08E726952874EFA10056D711 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		086053AB2868F66000A66A7A /* TransactionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08E726932874EF790056D711 /* Components */,
 				082D338E2868FB5C00DED276 /* TransactionScreenApp.swift */,
 				082D333E2868FABF00DED276 /* AddButton.swift */,
 				082D334B2868FABF00DED276 /* CategoriesItem.swift */,
@@ -152,6 +157,7 @@
 				086053B22868F66100A66A7A /* Preview Content */,
 				08E7268B28739AD10056D711 /* Header.swift */,
 				08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */,
+				08E726912874EE530056D711 /* DatesMenuFilter.swift */,
 			);
 			path = TransactionScreen;
 			sourceTree = "<group>";
@@ -179,6 +185,22 @@
 				086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */,
 			);
 			path = TransactionScreenUITests;
+			sourceTree = "<group>";
+		};
+		08E726932874EF790056D711 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08E726942874EF880056D711 /* Atomic */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		08E726942874EF880056D711 /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				08E726952874EFA10056D711 /* ClearButton.swift */,
+			);
+			path = Atomic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E726922874EE530056D711 /* DatesMenuFilter.swift in Sources */,
 				0859803C286A535600ED8B4C /* MockTransactionRepository.swift in Sources */,
 				08E7268C28739AD10056D711 /* Header.swift in Sources */,
 				082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */,
@@ -332,6 +355,7 @@
 				082D334D2868FABF00DED276 /* TransationsVIew.swift in Sources */,
 				08E726902874E8540056D711 /* CategoriesMenuFilter.swift in Sources */,
 				082D33552868FABF00DED276 /* TransactionAddNewModal.swift in Sources */,
+				08E726962874EFA10056D711 /* ClearButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
