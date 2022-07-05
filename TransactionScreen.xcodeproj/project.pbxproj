@@ -26,6 +26,7 @@
 		086053CA2868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */; };
 		086053F22868F70100A66A7A /* BudgetPlannerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 086053F12868F70100A66A7A /* BudgetPlannerCore */; };
 		08E7268C28739AD10056D711 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7268B28739AD10056D711 /* Header.swift */; };
+		08E726902874E8540056D711 /* CategoriesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		086053C72868F66200A66A7A /* TransactionScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITests.swift; sourceTree = "<group>"; };
 		086053C92868F66200A66A7A /* TransactionScreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionScreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08E7268B28739AD10056D711 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				086053B02868F66100A66A7A /* Assets.xcassets */,
 				086053B22868F66100A66A7A /* Preview Content */,
 				08E7268B28739AD10056D711 /* Header.swift */,
+				08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */,
 			);
 			path = TransactionScreen;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				082D338F2868FB5C00DED276 /* TransactionScreenApp.swift in Sources */,
 				082D334C2868FABF00DED276 /* TransactionItem.swift in Sources */,
 				082D334D2868FABF00DED276 /* TransationsVIew.swift in Sources */,
+				08E726902874E8540056D711 /* CategoriesMenuFilter.swift in Sources */,
 				082D33552868FABF00DED276 /* TransactionAddNewModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

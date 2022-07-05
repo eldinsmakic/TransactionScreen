@@ -13,6 +13,7 @@ struct TransationsView: View {
 
     @State private var isModalActivated = false
     @State private var editMode = EditMode.inactive
+    @State private var filterCategorie: CategorieDTO?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,6 +22,23 @@ struct TransationsView: View {
                     .font(.title)
                     .fontWeight(.bold)
                 Spacer()
+            }
+            VStack {
+                Text("Filters")
+                    .font(.title2)
+                HStack {
+                    VStack {
+                        Text("by Categories")
+                        CategoriesMenuFilter(selectedElement: $filterCategorie)
+                    }
+                }
+            }.onChange(of: filterCategorie) { newValue in
+                guard let value = newValue else {
+                    presenter.removeFilter()
+                    return
+                }
+
+                presenter.filter(by: value)
             }
             List {
                 ForEach(presenter.list) { element in
