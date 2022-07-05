@@ -38,7 +38,7 @@ final class TransactionPresenter: ObservableObject {
     }
     
     func filter(by date: Date) {
-        let filterList = dto.filter { $0.date == date }
+        let filterList = dto.filter { $0.date.isSameDayAs(date) }
 
         self.list = mapToViewModel(list: filterList)
     }
