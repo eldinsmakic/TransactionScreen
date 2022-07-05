@@ -41,13 +41,8 @@ struct CategoriesMenuFilter: View {
                 VStack {
                     HStack {
                         Spacer()
-                        Button {
+                        ClearButton {
                             self.selectedElement = nil
-                        } label: {
-                            Image(systemName: "x.circle")
-                                .foregroundColor(.white)
-                                .background(.red)
-                                .clipShape(Circle())
                         }
                     }
                     CategoriesItem(categorie: selectedElement, width: 16, height: 16)
