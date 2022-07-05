@@ -14,15 +14,33 @@ final class TransactionPresenter: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
 
     @Published var list: [TransactionViewModel] = []
+    @Published var dto: [TransactionDTO] = []
 
     var cancelable = Set<AnyCancellable>() 
 
     init() {
         repository.model.map(self.mapToViewModel(list:)).assign(to: &$list)
+        repository.model.assign(to: &$dto)
     }
 
     func fetch () {
         repository.fetch()
+    }
+    
+    func removeFilter() {
+        self.list = mapToViewModel(list: dto)
+    }
+
+    func filter(by categorie: CategorieDTO) {
+        let filterList = dto.filter { $0.categorie == categorie }
+        
+        self.list = mapToViewModel(list: filterList)
+    }
+    
+    func filter(by date: Date) {
+        let filterList = dto.filter { $0.date == date }
+
+        self.list = mapToViewModel(list: filterList)
     }
 
     func add(_ dto: TransactionDTO) {
