@@ -13,64 +13,41 @@ struct TransationsView: View {
 
     @State private var isModalActivated = false
     @State private var editMode = EditMode.inactive
-    @State private var filterByCategorie: CategorieDTO?
-    @State private var filterByDate: Date? = .now
+    @State private var isFilterViewPresented = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Transactions")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Spacer()
-            }
-            VStack {
-                Text("Filters")
-                    .font(.title2)
+        ZStack(alignment: .top) {
+            VStack(alignment: .leading) {
                 HStack {
-                    VStack {
-                        Text("by Categories")
-                        CategoriesMenuFilter(selectedElement: $filterByCategorie)
+                    Text("Transactions")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                List {
+                    ForEach(presenter.list) { element in
+                        Section(content: {
+                            ForEach(element.transactions) { transaction in
+                                TransactionItem(
+                                    model: transaction
+                                )
+                            }.onDelete(perform: presenter.onDelete(at:))
+                        }, header: {
+                            Header(date: element.date, amout: element.total)
+                        })
                     }
-                    VStack {
-                        Text("by Date")
-                        DatesMenuFilter(date: $filterByDate)
-                    }
                 }
-            }.onChange(of: filterByCategorie) { newValue in
-                guard let value = newValue else {
-                    presenter.removeFilter()
-                    return
-                }
-
-                presenter.filter(by: value)
-            }.onChange(of: filterByDate, perform: { newValue in
-                guard let value = newValue else {
-                    presenter.removeFilter()
-                    return
-                }
-
-                presenter.filter(by: value)
+            }.toolbar(content: {
+                EditButton()
             })
-            .padding()
-            List {
-                ForEach(presenter.list) { element in
-                    Section(content: {
-                        ForEach(element.transactions) { transaction in
-                            TransactionItem(
-                                model: transaction
-                            )
-                        }.onDelete(perform: presenter.onDelete(at:))
-                    }, header: {
-                        Header(date: element.date, amout: element.total)
-                    })
-                }
-            }
-        }.toolbar(content: {
-            EditButton()
-        })
             .padding(.top, 40)
             .padding(.horizontal)
+            .sheet(
+                isPresented: $isFilterViewPresented,
+                onDismiss: {}
+            ) {
+                FiltersView(presenter: presenter).padding()
+            }
             .sheet(
                 isPresented: $isModalActivated,
                 onDismiss: {}
@@ -81,12 +58,19 @@ struct TransationsView: View {
             }
             .onAppear{
                 presenter.fetch()
-                        // Set the default to clear
+                // Set the default to clear
                 UITableView.appearance().backgroundColor = .clear
             }
             .addAddButton {
                 self.isModalActivated = true
             }
+            HStack {
+                Spacer()
+                FilterButton {
+                    isFilterViewPresented = true
+                }.padding(.trailing)
+            }
+        }
     }
 }
 

@@ -40,13 +40,12 @@ struct CategoriesMenuFilter: View {
             if let selectedElement = selectedElement {
                 VStack {
                     HStack {
-                        Spacer()
+                        CategoriesItem(categorie: selectedElement, width: 16, height: 16)
                         ClearButton {
                             self.selectedElement = nil
-                        }
+                        }.padding(.leading, 20)
                     }
-                    CategoriesItem(categorie: selectedElement, width: 16, height: 16)
-                }.frame(width: 150, height: 40, alignment: .leading)
+                }.frame(width: 250, height: 40, alignment: .leading)
             } else {
                  Text("Select a categorie")
                     .foregroundColor(.gray)

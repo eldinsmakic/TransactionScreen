@@ -12,16 +12,20 @@ struct DatesMenuFilter: View {
     @State private var value: Date = .now
     
     var body: some View {
-        HStack {
-            DatePicker("", selection: $value, displayedComponents: .date)
-                .datePickerStyle(.compact)
-            if let _ = date {
-                ClearButton {
-                    self.date = nil
+        VStack(alignment: .center) {
+            HStack {
+                Spacer()
+                DatePicker("", selection: $value, displayedComponents: .date)
+                    .datePickerStyle(.compact)
+                    .frame(width: 120)
+                if let _ = date {
+                    ClearButton {
+                        self.date = nil
+                    }
                 }
+                Spacer()
             }
-        }.frame(width: 200, height: 80)
-            .onChange(of: value) { newValue in
+        }.onChange(of: value) { newValue in
             date = newValue
         }
     }

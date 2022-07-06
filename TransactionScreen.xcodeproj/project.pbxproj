@@ -29,6 +29,8 @@
 		08E726902874E8540056D711 /* CategoriesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */; };
 		08E726922874EE530056D711 /* DatesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E726912874EE530056D711 /* DatesMenuFilter.swift */; };
 		08E726962874EFA10056D711 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E726952874EFA10056D711 /* ClearButton.swift */; };
+		08E72698287589060056D711 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E72697287589060056D711 /* FiltersView.swift */; };
+		08E7269A28758C150056D711 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7269928758C150056D711 /* FilterButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesMenuFilter.swift; sourceTree = "<group>"; };
 		08E726912874EE530056D711 /* DatesMenuFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesMenuFilter.swift; sourceTree = "<group>"; };
 		08E726952874EFA10056D711 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		08E72697287589060056D711 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		08E7269928758C150056D711 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,9 +157,9 @@
 				082D333C2868FABF00DED276 /* TransactionItem.swift */,
 				082D33412868FABF00DED276 /* TransactionPresenter.swift */,
 				082D333D2868FABF00DED276 /* TransationsVIew.swift */,
+				08E72697287589060056D711 /* FiltersView.swift */,
 				086053B02868F66100A66A7A /* Assets.xcassets */,
 				086053B22868F66100A66A7A /* Preview Content */,
-				08E7268B28739AD10056D711 /* Header.swift */,
 				08E7268F2874E8540056D711 /* CategoriesMenuFilter.swift */,
 				08E726912874EE530056D711 /* DatesMenuFilter.swift */,
 			);
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				08E726952874EFA10056D711 /* ClearButton.swift */,
+				08E7269928758C150056D711 /* FilterButton.swift */,
+				08E7268B28739AD10056D711 /* Header.swift */,
 			);
 			path = Atomic;
 			sourceTree = "<group>";
@@ -341,11 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E726922874EE530056D711 /* DatesMenuFilter.swift in Sources */,
+				08E7269A28758C150056D711 /* FilterButton.swift in Sources */,
 				0859803C286A535600ED8B4C /* MockTransactionRepository.swift in Sources */,
 				08E7268C28739AD10056D711 /* Header.swift in Sources */,
 				082D33572868FABF00DED276 /* CategoriesItem.swift in Sources */,
 				082D33562868FABF00DED276 /* CategoriesMenu.swift in Sources */,
 				082D334E2868FABF00DED276 /* AddButton.swift in Sources */,
+				08E72698287589060056D711 /* FiltersView.swift in Sources */,
 				082D33522868FABF00DED276 /* InjectionInit.swift in Sources */,
 				0859803E286A53AC00ED8B4C /* MockCategorieRepository.swift in Sources */,
 				082D33512868FABF00DED276 /* TransactionLocalStorageMock.swift in Sources */,
