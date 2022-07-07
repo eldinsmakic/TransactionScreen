@@ -28,7 +28,7 @@ struct TransactionAddNewModal: View {
             CategoriesMenu(selectedElement: $categorie)
             HStack {
                 Spacer()
-                DatePicker("Date", selection: $date)
+                DatePicker("Date", selection: $date, displayedComponents: .date)
                     .datePickerStyle(.graphical)
                 Spacer()
             }
