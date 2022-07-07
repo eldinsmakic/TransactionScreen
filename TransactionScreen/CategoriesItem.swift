@@ -8,13 +8,13 @@
 import SwiftUI
 import BudgetPlannerCore
 
-struct CategoriesItem: View {
+public struct CategoriesItem: View {
     let categorie: CategorieDTO
     
     let width: CGFloat
     let height: CGFloat
     
-    init(
+    public init(
         categorie: CategorieDTO,
         width: CGFloat = 46,
         height: CGFloat = 46
@@ -24,7 +24,7 @@ struct CategoriesItem: View {
         self.height = height
     }
     
-    var body: some View {
+    public var body: some View {
         HStack {
             Image(systemName: categorie.image)
                 .resizable()

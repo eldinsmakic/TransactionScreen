@@ -2,13 +2,13 @@
 //  TransactionScreenTests.swift
 //  TransactionScreenTests
 //
-//  Created by Eldin SMAKIC on 26/06/2022.
+//  Created by Eldin SMAKIC on 07/07/2022.
 //
 
 import XCTest
 @testable import TransactionScreen
 
-class TransactionScreenTests: XCTestCase {
+final class TransactionScreenTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

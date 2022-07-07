@@ -11,56 +11,100 @@ import BudgetPlannerCore
 
 struct FiltersView: View {
     @ObservedObject var presenter: TransactionPresenter
+    @Binding var isPresented: Bool
+
     @State private var filterByCategorie: CategorieDTO?
     @State private var filterByDate: Date?
 
     var body: some View {
-        VStack {
-            Text("Filters")
-                .font(.title2)
-                .fontWeight(.bold)
+        ZStack(alignment: .top) {
+            VStack {
+                Text("Filters")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding()
+
+                HStack {
+                    Text("Categories")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+                CategoriesMenuFilter(selectedElement: $filterByCategorie)
+                Divider()
+                HStack {
+                    Text("Dates")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    Spacer()
+                }
+                DatesMenuFilter(date: $filterByDate)
+                Spacer()
+
+                Button {
+                    presenter.removeFilter()
+                } label: {
+                    Text("Clear")
+                        .fontWeight(.bold)
+                        .padding()
+                        .frame(width: 200, height: 40)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                        .cornerRadius(25)
+                }
+                
+                Button {
+                    presenter.applyFilter(
+                        filterByCategorie,
+                        filterByDate,
+                        nil
+                    )
+                } label: {
+                    Text("Apply")
+                        .fontWeight(.bold)
+                        .padding()
+                        .frame(width: 200, height: 40)
+                        .foregroundColor(.white)
+                        .background(Color.green)
+                        .cornerRadius(25)
+                }
                 .padding()
-
-            HStack {
-                Text("Categories")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
-                Spacer()
             }
-            CategoriesMenuFilter(selectedElement: $filterByCategorie)
-            Divider()
             HStack {
-                Text("Dates")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.gray)
                 Spacer()
+                Button {
+                    isPresented = false
+                } label: {
+                    Image(systemName: "x.square.fill")
+                        .resizable()
+                        .foregroundColor(.red)
+                        .frame(width: 32, height: 32)
+                }.padding(.trailing)
             }
-            DatesMenuFilter(date: $filterByDate)
-            Spacer()
         }
-        .onChange(of: filterByCategorie) { newValue in
-            guard let value = newValue else {
-                presenter.removeFilter()
-                return
-            }
-
-            presenter.filter(by: value)
-        }.onChange(of: filterByDate, perform: { newValue in
-            guard let value = newValue else {
-                presenter.removeFilter()
-                return
-            }
-
-            presenter.filter(by: value)
-        })
+//        .onChange(of: filterByCategorie) { newValue in
+//            guard let value = newValue else {
+//                return
+//            }
+//
+//            presenter.filter(by: value)
+//        }.onChange(of: filterByDate, perform: { newValue in
+//            guard let value = newValue else {
+//                return
+//            }
+//
+//            presenter.filter(by: value)
+//        })
     }
 }
 
 struct FiltersView_Previews: PreviewProvider {
-    static var injection = InjectionInit()
+//    static var injection = InjectionInit()
+    @State static var isPresented = true
+
     static var previews: some View {
-        FiltersView(presenter: .init())
+        FiltersView(presenter: .init(), isPresented: $isPresented)
     }
 }

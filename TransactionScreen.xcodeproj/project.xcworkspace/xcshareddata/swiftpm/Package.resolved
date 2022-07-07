@@ -6,7 +6,7 @@
       "location" : "https://github.com/eldinsmakic/BudgetPlannerCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "6aa737fb23bc4b312eb31b5051bea3a8019dc990"
+        "revision" : "305799495badf287b23205d3ebf385f20ff39f30"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/combine-schedulers",
       "state" : {
-        "revision" : "4cf088c29a20f52be0f2ca54992b492c54e0076b",
-        "version" : "0.5.3"
+        "revision" : "0ba3a562716efabb585ccb169450c5389107286b",
+        "version" : "0.6.0"
       }
     },
     {
@@ -51,7 +51,7 @@
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
         "branch" : "main",
-        "revision" : "b55977808fcc2ff75081b90f197f6e72a21214b4"
+        "revision" : "0080d5c74505fbbd0e98ce274f55aad253014272"
       }
     },
     {
@@ -95,8 +95,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
       "state" : {
-        "revision" : "50a70a9d3583fe228ce672e8923010c8df2deddd",
-        "version" : "0.2.1"
+        "revision" : "046aba2944a7e197e5dc070836f8fe2d47d0e471",
+        "version" : "0.3.2"
       }
     }
   ],

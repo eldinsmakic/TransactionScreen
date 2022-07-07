@@ -10,7 +10,7 @@ import BudgetPlannerCore
 import Foundation
 import SwiftUI
 
-final class TransactionPresenter: ObservableObject {
+public final class TransactionPresenter: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
 
     @Published var list: [TransactionViewModel] = []
@@ -18,7 +18,7 @@ final class TransactionPresenter: ObservableObject {
 
     var cancelable = Set<AnyCancellable>() 
 
-    init() {
+    public init() {
         repository.model.map(self.mapToViewModel(list:)).assign(to: &$list)
         repository.model.assign(to: &$dto)
     }

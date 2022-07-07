@@ -8,14 +8,18 @@
 import SwiftUI
 import BudgetPlannerCore
 
-struct TransationsView: View {
+public struct TransationsView: View {
     @ObservedObject var presenter: TransactionPresenter
+    
+    public init(presenter: TransactionPresenter) {
+        self.presenter = presenter
+    }
 
     @State private var isModalActivated = false
     @State private var editMode = EditMode.inactive
     @State private var isFilterViewPresented = false
     
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .leading) {
                 HStack {
@@ -46,7 +50,7 @@ struct TransationsView: View {
                 isPresented: $isFilterViewPresented,
                 onDismiss: {}
             ) {
-                FiltersView(presenter: presenter).padding()
+                FiltersView(presenter: presenter, isPresented: $isFilterViewPresented).padding()
             }
             .sheet(
                 isPresented: $isModalActivated,
@@ -75,7 +79,7 @@ struct TransationsView: View {
 }
 
 struct TransationsVIew_Previews: PreviewProvider {
-    static var injection = InjectionInit()
+//    static var injection = InjectionInit()
     static var previews: some View {
         TransationsView(presenter: .init())
             .previewInterfaceOrientation(.landscapeLeft)
