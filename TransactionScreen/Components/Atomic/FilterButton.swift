@@ -22,8 +22,13 @@ struct FilterButton: View {
             } label: {
                 Image(systemName: "slider.vertical.3")
                     .resizable()
-                    .frame(width: 32, height: 32)
-            }
+                    .frame(width: 16, height: 16)
+                Text("Filter")
+            }.padding([.leading, .trailing], 20)
+                .padding([.top, .bottom], 5)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(15)
         }
     }
 }
