@@ -31,16 +31,22 @@ final class TransactionPresenter: ObservableObject {
         self.list = mapToViewModel(list: dto)
     }
 
-    func filter(by categorie: CategorieDTO) {
-        let filterList = dto.filter { $0.categorie == categorie }
+    func applyFilter(_ categorie: CategorieDTO? = nil, _ date: Date?, _ amount: Decimal?) {
+        var result: [TransactionDTO] = dto
         
-        self.list = mapToViewModel(list: filterList)
-    }
-    
-    func filter(by date: Date) {
-        let filterList = dto.filter { $0.date.isSameDayAs(date) }
+        if let categorie = categorie {
+            result = result.filter(by: categorie)
+        }
 
-        self.list = mapToViewModel(list: filterList)
+        if let date = date {
+            result = result.filter(by: date)
+        }
+
+        if let amount = amount {
+            result = result.filter(by: amount)
+        }
+
+        list = mapToViewModel(list: result)
     }
 
     func add(_ dto: TransactionDTO) {
