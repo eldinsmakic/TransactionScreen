@@ -10,7 +10,7 @@ import BudgetPlannerCore
 import Foundation
 import SwiftUI
 
-public final class TransactionPresenter: ObservableObject {
+public final class Presenter: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
 
     @Published var list: [TransactionViewModel] = []

@@ -10,7 +10,7 @@
 		080606222877324F0058DE6D /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080606082877324E0058DE6D /* AddButton.swift */; };
 		080606232877324F0058DE6D /* TransactionScreen.docc in Sources */ = {isa = PBXBuildFile; fileRef = 080606092877324E0058DE6D /* TransactionScreen.docc */; };
 		080606242877324F0058DE6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0806060B2877324E0058DE6D /* Preview Assets.xcassets */; };
-		080606252877324F0058DE6D /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806060C2877324E0058DE6D /* TransactionPresenter.swift */; };
+		080606252877324F0058DE6D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806060C2877324E0058DE6D /* Presenter.swift */; };
 		080606262877324F0058DE6D /* TransactionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806060D2877324E0058DE6D /* TransactionItem.swift */; };
 		080606272877324F0058DE6D /* CategoriesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806060E2877324E0058DE6D /* CategoriesItem.swift */; };
 		080606282877324F0058DE6D /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806060F2877324E0058DE6D /* TransactionScreenApp.swift */; };
@@ -26,7 +26,7 @@
 		080606322877324F0058DE6D /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806061D2877324F0058DE6D /* ClearButton.swift */; };
 		080606332877324F0058DE6D /* CategoriesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806061E2877324F0058DE6D /* CategoriesMenuFilter.swift */; };
 		080606342877324F0058DE6D /* DatesMenuFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0806061F2877324F0058DE6D /* DatesMenuFilter.swift */; };
-		080606352877324F0058DE6D /* TransationsVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080606202877324F0058DE6D /* TransationsVIew.swift */; };
+		080606352877324F0058DE6D /* VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080606202877324F0058DE6D /* VIew.swift */; };
 		080606362877324F0058DE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080606212877324F0058DE6D /* Assets.xcassets */; };
 		08B626FF287706C4007DA861 /* TransactionScreen.docc in Sources */ = {isa = PBXBuildFile; fileRef = 08B626FE287706C4007DA861 /* TransactionScreen.docc */; };
 		08B62705287706C4007DA861 /* TransactionScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B626FA287706C4007DA861 /* TransactionScreen.framework */; };
@@ -49,7 +49,7 @@
 		080606082877324E0058DE6D /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		080606092877324E0058DE6D /* TransactionScreen.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TransactionScreen.docc; sourceTree = "<group>"; };
 		0806060B2877324E0058DE6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0806060C2877324E0058DE6D /* TransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
+		0806060C2877324E0058DE6D /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0806060D2877324E0058DE6D /* TransactionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionItem.swift; sourceTree = "<group>"; };
 		0806060E2877324E0058DE6D /* CategoriesItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesItem.swift; sourceTree = "<group>"; };
 		0806060F2877324E0058DE6D /* TransactionScreenApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionScreenApp.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		0806061D2877324F0058DE6D /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		0806061E2877324F0058DE6D /* CategoriesMenuFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesMenuFilter.swift; sourceTree = "<group>"; };
 		0806061F2877324F0058DE6D /* DatesMenuFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesMenuFilter.swift; sourceTree = "<group>"; };
-		080606202877324F0058DE6D /* TransationsVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransationsVIew.swift; sourceTree = "<group>"; };
+		080606202877324F0058DE6D /* VIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIew.swift; sourceTree = "<group>"; };
 		080606212877324F0058DE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08B626FA287706C4007DA861 /* TransactionScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransactionScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B626FD287706C4007DA861 /* TransactionScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionScreen.h; sourceTree = "<group>"; };
@@ -124,6 +124,8 @@
 		080606192877324F0058DE6D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				08179CD3287A1ADA0097CEB3 /* Organisme */,
+				08179CD1287A1A930097CEB3 /* Molecules */,
 				0806061A2877324F0058DE6D /* Atomic */,
 			);
 			path = Components;
@@ -137,6 +139,56 @@
 				0806061D2877324F0058DE6D /* ClearButton.swift */,
 			);
 			path = Atomic;
+			sourceTree = "<group>";
+		};
+		08179CD1287A1A930097CEB3 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				08179CD2287A1A9B0097CEB3 /* Filters */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		08179CD2287A1A9B0097CEB3 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				0806061E2877324F0058DE6D /* CategoriesMenuFilter.swift */,
+				0806061F2877324F0058DE6D /* DatesMenuFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		08179CD3287A1ADA0097CEB3 /* Organisme */ = {
+			isa = PBXGroup;
+			children = (
+				080606102877324E0058DE6D /* FiltersView.swift */,
+				080606122877324E0058DE6D /* TransactionAddNewModal.swift */,
+			);
+			path = Organisme;
+			sourceTree = "<group>";
+		};
+		08179CD4287A1B190097CEB3 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				080606082877324E0058DE6D /* AddButton.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		08179CD5287A1CB00097CEB3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				08179CD4287A1B190097CEB3 /* Modifier */,
+				080606202877324F0058DE6D /* VIew.swift */,
+				080606112877324E0058DE6D /* CategoriesMenu.swift */,
+				080606192877324F0058DE6D /* Components */,
+				0806060E2877324E0058DE6D /* CategoriesItem.swift */,
+				080606132877324E0058DE6D /* Mock */,
+				0806060D2877324E0058DE6D /* TransactionItem.swift */,
+				0806060A2877324E0058DE6D /* Preview Content */,
+				0806060C2877324E0058DE6D /* Presenter.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		08B626F0287706C4007DA861 = {
@@ -160,22 +212,10 @@
 		08B626FC287706C4007DA861 /* TransactionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				08179CD5287A1CB00097CEB3 /* Sources */,
 				080606212877324F0058DE6D /* Assets.xcassets */,
-				0806061E2877324F0058DE6D /* CategoriesMenuFilter.swift */,
-				080606112877324E0058DE6D /* CategoriesMenu.swift */,
-				080606192877324F0058DE6D /* Components */,
-				0806061F2877324F0058DE6D /* DatesMenuFilter.swift */,
-				0806060E2877324E0058DE6D /* CategoriesItem.swift */,
-				080606102877324E0058DE6D /* FiltersView.swift */,
-				080606132877324E0058DE6D /* Mock */,
-				080606122877324E0058DE6D /* TransactionAddNewModal.swift */,
-				0806060D2877324E0058DE6D /* TransactionItem.swift */,
-				080606082877324E0058DE6D /* AddButton.swift */,
-				0806060A2877324E0058DE6D /* Preview Content */,
-				0806060C2877324E0058DE6D /* TransactionPresenter.swift */,
 				080606092877324E0058DE6D /* TransactionScreen.docc */,
 				0806060F2877324E0058DE6D /* TransactionScreenApp.swift */,
-				080606202877324F0058DE6D /* TransationsVIew.swift */,
 				08B626FD287706C4007DA861 /* TransactionScreen.h */,
 				08B626FE287706C4007DA861 /* TransactionScreen.docc */,
 			);
@@ -314,7 +354,7 @@
 				0806062B2877324F0058DE6D /* TransactionAddNewModal.swift in Sources */,
 				0806062C2877324F0058DE6D /* MockTransactionRepository.swift in Sources */,
 				0806062D2877324F0058DE6D /* TransactionLocalStorageMock.swift in Sources */,
-				080606252877324F0058DE6D /* TransactionPresenter.swift in Sources */,
+				080606252877324F0058DE6D /* Presenter.swift in Sources */,
 				0806062A2877324F0058DE6D /* CategoriesMenu.swift in Sources */,
 				080606282877324F0058DE6D /* TransactionScreenApp.swift in Sources */,
 				080606302877324F0058DE6D /* Header.swift in Sources */,
@@ -325,7 +365,7 @@
 				080606342877324F0058DE6D /* DatesMenuFilter.swift in Sources */,
 				080606322877324F0058DE6D /* ClearButton.swift in Sources */,
 				080606232877324F0058DE6D /* TransactionScreen.docc in Sources */,
-				080606352877324F0058DE6D /* TransationsVIew.swift in Sources */,
+				080606352877324F0058DE6D /* VIew.swift in Sources */,
 				080606262877324F0058DE6D /* TransactionItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

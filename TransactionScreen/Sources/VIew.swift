@@ -8,10 +8,10 @@
 import SwiftUI
 import BudgetPlannerCore
 
-public struct TransationsView: View {
-    @ObservedObject var presenter: TransactionPresenter
+public struct MainView: View {
+    @ObservedObject var presenter: Presenter
     
-    public init(presenter: TransactionPresenter) {
+    public init(presenter: Presenter) {
         self.presenter = presenter
     }
 
@@ -81,7 +81,7 @@ public struct TransationsView: View {
 struct TransationsVIew_Previews: PreviewProvider {
 //    static var injection = InjectionInit()
     static var previews: some View {
-        TransationsView(presenter: .init())
+        MainView(presenter: .init())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

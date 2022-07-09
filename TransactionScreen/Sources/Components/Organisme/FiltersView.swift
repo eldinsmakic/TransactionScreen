@@ -10,7 +10,7 @@ import Combine
 import BudgetPlannerCore
 
 struct FiltersView: View {
-    @ObservedObject var presenter: TransactionPresenter
+    @ObservedObject var presenter: Presenter
     @Binding var isPresented: Bool
 
     @State private var filterByCategorie: CategorieDTO?

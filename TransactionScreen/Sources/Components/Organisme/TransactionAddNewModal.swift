@@ -17,7 +17,7 @@ struct TransactionAddNewModal: View {
     
     @Binding var isModalActivated: Bool
 
-    @ObservedObject var presenter: TransactionPresenter
+    @ObservedObject var presenter: Presenter
 
     var body: some View {
         VStack(alignment: .center) {
@@ -66,7 +66,7 @@ struct TransactionAddNewModal: View {
 
 struct TransactionAddNewModal_Previews: PreviewProvider {
     @State static var isModalActivated = false
-    @State static var presenter = TransactionPresenter()
+    @State static var presenter = Presenter()
     static var previews: some View {
         TransactionAddNewModal(isModalActivated: $isModalActivated, presenter: presenter)
     }
