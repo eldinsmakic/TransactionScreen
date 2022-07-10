@@ -1,12 +1,12 @@
 //
 //  TransactionScreenApp.swift
-//  TransactionScreen
+//  Shared
 //
-//  Created by Eldin SMAKIC on 26/06/2022.
+//  Created by Eldin SMAKIC on 10/07/2022.
 //
-
 import Foundation
 import SwiftUI
+import TransactionScreenLib
 
 @main
 struct testApp: App {

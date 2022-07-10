@@ -3,10 +3,10 @@
     {
       "identity" : "budgetplannercore",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/eldinsmakic/BudgetPlannerCore.git",
+      "location" : "https://github.com/eldinsmakic/BudgetPlannerCore",
       "state" : {
         "branch" : "main",
-        "revision" : "305799495badf287b23205d3ebf385f20ff39f30"
+        "revision" : "db09afb13cbe12b1e6c83889d9665dd1cd44940b"
       }
     },
     {
@@ -51,7 +51,7 @@
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
         "branch" : "main",
-        "revision" : "0080d5c74505fbbd0e98ce274f55aad253014272"
+        "revision" : "21230a9735f26d99ab8959eacdefe3a5b09761e1"
       }
     },
     {
@@ -95,8 +95,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
       "state" : {
-        "revision" : "046aba2944a7e197e5dc070836f8fe2d47d0e471",
-        "version" : "0.3.2"
+        "revision" : "ef8e14e7ce1c0c304c644c6ba365d06c468ded6b",
+        "version" : "0.3.3"
       }
     }
   ],
