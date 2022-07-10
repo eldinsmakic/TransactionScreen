@@ -10,7 +10,7 @@ import Combine
 import BudgetPlannerCore
 
 struct FiltersView: View {
-    @ObservedObject var presenter: Presenter
+    @ObservedObject var viewModel: ViewModel
     @Binding var isPresented: Bool
 
     @State private var filterByCategorie: CategorieDTO?
@@ -44,7 +44,7 @@ struct FiltersView: View {
                 Spacer()
 
                 Button {
-                    presenter.removeFilter()
+                    viewModel.removeFilter()
                 } label: {
                     Text("Clear")
                         .fontWeight(.bold)
@@ -56,7 +56,7 @@ struct FiltersView: View {
                 }
                 
                 Button {
-                    presenter.applyFilter(
+                    viewModel.applyFilter(
                         filterByCategorie,
                         filterByDate,
                         nil
@@ -105,6 +105,6 @@ struct FiltersView_Previews: PreviewProvider {
     @State static var isPresented = true
 
     static var previews: some View {
-        FiltersView(presenter: .init(), isPresented: $isPresented)
+        FiltersView(viewModel: .init(), isPresented: $isPresented)
     }
 }

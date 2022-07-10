@@ -17,7 +17,7 @@ struct TransactionAddNewModal: View {
     
     @Binding var isModalActivated: Bool
 
-    @ObservedObject var presenter: Presenter
+    @ObservedObject var viewModel: ViewModel
 
     var body: some View {
         VStack(alignment: .center) {
@@ -50,7 +50,7 @@ struct TransactionAddNewModal: View {
                     withCategorie: categorie,
                     description: description
                 )
-                presenter.add(transaction)
+                viewModel.add(transaction)
                 isModalActivated = false
             } label: {
                 Text("Validate")
@@ -66,8 +66,8 @@ struct TransactionAddNewModal: View {
 
 struct TransactionAddNewModal_Previews: PreviewProvider {
     @State static var isModalActivated = false
-    @State static var presenter = Presenter()
+    @State static var presenter = ViewModel()
     static var previews: some View {
-        TransactionAddNewModal(isModalActivated: $isModalActivated, presenter: presenter)
+        TransactionAddNewModal(isModalActivated: $isModalActivated, viewModel: presenter)
     }
 }

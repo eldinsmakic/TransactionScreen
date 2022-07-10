@@ -7,18 +7,9 @@
 
 import SwiftUI
 
-struct TransactionItemModel {
-    let Title: String
-    let subtitle: String
-    let date: Date
-    let amount: String
-    let amountColor: Color
-    let image: String
-    let imageColor: Color
-}
 
 struct TransactionItem: View {
-    let model: TransactionItemModel
+    let model: Transaction
 
     var body: some View {
         HStack {
@@ -48,7 +39,7 @@ struct TransactionItem: View {
 }
 
 struct TransactionItem_Previews: PreviewProvider {
-    static let model = TransactionItemModel(
+    static let model = Transaction(
         Title: "Pizza Hut",
         subtitle: "Anne anniversary",
         date: Date(),
@@ -62,7 +53,6 @@ struct TransactionItem_Previews: PreviewProvider {
         Group {
             TransactionItem(model: model)
             TransactionItem(model: model)
-.previewInterfaceOrientation(.landscapeLeft)
         }
     }
 }

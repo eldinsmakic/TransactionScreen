@@ -10,10 +10,10 @@ import BudgetPlannerCore
 import Foundation
 import SwiftUI
 
-public final class Presenter: ObservableObject {
+public final class ViewModel: ObservableObject {
     @Injected var repository: AnyRepository<TransactionDTO>
 
-    @Published var list: [TransactionViewModel] = []
+    @Published var list: [Model] = []
     @Published var dto: [TransactionDTO] = []
 
     var cancelable = Set<AnyCancellable>() 
@@ -57,9 +57,9 @@ public final class Presenter: ObservableObject {
         repository.delete(offsets)
     }
 
-    func mapToViewModel(list: [TransactionDTO]) -> [TransactionViewModel] {
+    func mapToViewModel(list: [TransactionDTO]) -> [Model] {
         var compute: [String: [TransactionDTO]] = [:]
-        let result :[TransactionViewModel]
+        let result: [Model]
 
         list.forEach { i in
             compute[i.date.toKey] = []
@@ -69,9 +69,9 @@ public final class Presenter: ObservableObject {
             compute[transaction.date.toKey]?.append(transaction)
         }
 
-        result = compute.map { (key: String, value: [TransactionDTO]) -> TransactionViewModel in
+        result = compute.map { (key: String, value: [TransactionDTO]) -> Model in
             let transactions = value.map { transaction in
-                TransactionItemModel(
+                Transaction(
                     Title: transaction.title,
                     subtitle: transaction.description,
                     date: transaction.date,
@@ -86,49 +86,11 @@ public final class Presenter: ObservableObject {
             let positif = value.filter { $0.categorie.type == .revenue }.map(\.montant)
             let total = negatif.reduce(0,-) + positif.reduce(0,+)
 
-            return TransactionViewModel(date: transactions[0].date, total: NSNumber(value: total.doubleValue) , transactions: transactions)
+            return Model(date: transactions[0].date, total: NSNumber(value: total.doubleValue) , transactions: transactions)
         }
 
         return result.sorted { transactionOne, transactionTwo in
             transactionOne.date < transactionTwo.date
         }
     }
-}
-
-extension Decimal {
-    var doubleValue:Double {
-        return NSDecimalNumber(decimal:self).doubleValue
-    }
-}
-
-extension Date {
-    private var format: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.setLocalizedDateFormatFromTemplate("MMMMd")
-        return formatter
-    }
-
-    var toFormatDate: String {
-        self.isToday ? "Today" : format.string(from: self)
-    }
-
-    var toKey: String {
-//        format.setLocalizedDateFormatFromTemplate("DD/MM/YY")
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.dateFormat = "dd/MM/YY"
-        return formatter.string(from: self)
-    }
-}
-
-struct TransactionViewModel: Identifiable {
-    var id = UUID()
-    var date: Date
-    var total: NSNumber
-    var transactions: [TransactionItemModel]
-}
-
-extension TransactionItemModel: Identifiable {
-    public var id: UUID { UUID() }
 }

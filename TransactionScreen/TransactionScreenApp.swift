@@ -10,10 +10,10 @@ import SwiftUI
 
 @main
 struct testApp: App {
-//    let injection = InjectionInit()
+    let injection = InjectionInit()
     var body: some Scene {
         WindowGroup {
-            MainView(presenter: Presenter())
+            MainView(ViewModel())
         }
     }
 }

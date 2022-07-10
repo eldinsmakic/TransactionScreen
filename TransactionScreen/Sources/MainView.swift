@@ -9,10 +9,10 @@ import SwiftUI
 import BudgetPlannerCore
 
 public struct MainView: View {
-    @ObservedObject var presenter: Presenter
+    @ObservedObject var viewModel: ViewModel
     
-    public init(presenter: Presenter) {
-        self.presenter = presenter
+    public init(_ viewModel: ViewModel) {
+        self.viewModel = viewModel
     }
 
     @State private var isModalActivated = false
@@ -29,13 +29,13 @@ public struct MainView: View {
                     Spacer()
                 }
                 List {
-                    ForEach(presenter.list) { element in
+                    ForEach(viewModel.list) { element in
                         Section(content: {
                             ForEach(element.transactions) { transaction in
                                 TransactionItem(
                                     model: transaction
                                 )
-                            }.onDelete(perform: presenter.onDelete(at:))
+                            }.onDelete(perform: viewModel.onDelete(at:))
                         }, header: {
                             Header(date: element.date, amout: element.total)
                         })
@@ -50,18 +50,18 @@ public struct MainView: View {
                 isPresented: $isFilterViewPresented,
                 onDismiss: {}
             ) {
-                FiltersView(presenter: presenter, isPresented: $isFilterViewPresented).padding()
+                FiltersView(viewModel: viewModel, isPresented: $isFilterViewPresented).padding()
             }
             .sheet(
                 isPresented: $isModalActivated,
                 onDismiss: {}
             ) {
-                TransactionAddNewModal(isModalActivated: $isModalActivated, presenter: presenter)
+                TransactionAddNewModal(isModalActivated: $isModalActivated, viewModel: viewModel)
                     .background(.white)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             }
             .onAppear{
-                presenter.fetch()
+                viewModel.fetch()
                 // Set the default to clear
                 UITableView.appearance().backgroundColor = .clear
             }
@@ -81,7 +81,7 @@ public struct MainView: View {
 struct TransationsVIew_Previews: PreviewProvider {
 //    static var injection = InjectionInit()
     static var previews: some View {
-        MainView(presenter: .init())
+        MainView(.init())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
