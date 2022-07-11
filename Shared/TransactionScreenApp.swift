@@ -6,7 +6,7 @@
 //
 import Foundation
 import SwiftUI
-import TransactionScreenLib
+import TransactionScreenKit
 
 @main
 struct testApp: App {
@@ -16,4 +16,4 @@ struct testApp: App {
             MainView(ViewModel())
         }
     }
-}
+}  

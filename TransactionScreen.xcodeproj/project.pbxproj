@@ -15,7 +15,8 @@
 		080EC27E287B1E3A00999C9D /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EC255287B1E3900999C9D /* TransactionScreenApp.swift */; };
 		080EC281287B1E3A00999C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080EC257287B1E3A00999C9D /* Assets.xcassets */; };
 		080EC282287B1E3A00999C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080EC257287B1E3A00999C9D /* Assets.xcassets */; };
-		088C57AB287B1F4000924CF7 /* TransactionScreenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 088C57AA287B1F4000924CF7 /* TransactionScreenLib */; };
+		0855FEA0287CADD10044E518 /* TransactionScreenKit in Resources */ = {isa = PBXBuildFile; fileRef = 0855FE9F287CADD10044E518 /* TransactionScreenKit */; };
+		0855FEA2287CAE130044E518 /* TransactionScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0855FEA1287CAE130044E518 /* TransactionScreenKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 		080EC275287B1E3A00999C9D /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		080EC279287B1E3A00999C9D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		080EC27B287B1E3A00999C9D /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		08D9C7F9287B3B04000BD7A6 /* TransactionScreenLib */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TransactionScreenLib; path = ../../TransactionScreenLib; sourceTree = "<group>"; };
+		0855FE9F287CADD10044E518 /* TransactionScreenKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TransactionScreenKit; path = Package/TransactionScreenKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				088C57AB287B1F4000924CF7 /* TransactionScreenLib in Frameworks */,
+				0855FEA2287CAE130044E518 /* TransactionScreenKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,18 +84,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080C4EA2287B1F14005B824B /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				08D9C7F9287B3B04000BD7A6 /* TransactionScreenLib */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		080EC24F287B1E3800999C9D = {
 			isa = PBXGroup;
 			children = (
-				080C4EA2287B1F14005B824B /* Packages */,
+				08D9C803287B3EE1000BD7A6 /* Packages */,
 				080EC254287B1E3800999C9D /* Shared */,
 				080EC263287B1E3A00999C9D /* macOS */,
 				080EC26C287B1E3A00999C9D /* Tests iOS */,
@@ -157,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		08D9C803287B3EE1000BD7A6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				0855FE9F287CADD10044E518 /* TransactionScreenKit */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,7 +175,7 @@
 			);
 			name = "TransactionScreen (iOS)";
 			packageProductDependencies = (
-				088C57AA287B1F4000924CF7 /* TransactionScreenLib */,
+				0855FEA1287CAE130044E518 /* TransactionScreenKit */,
 			);
 			productName = "TransactionScreen (iOS)";
 			productReference = 080EC25C287B1E3A00999C9D /* TransactionScreen.app */;
@@ -285,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0855FEA0287CADD10044E518 /* TransactionScreenKit in Resources */,
 				080EC281287B1E3A00999C9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,9 +722,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		088C57AA287B1F4000924CF7 /* TransactionScreenLib */ = {
+		0855FEA1287CAE130044E518 /* TransactionScreenKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TransactionScreenLib;
+			productName = TransactionScreenKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
