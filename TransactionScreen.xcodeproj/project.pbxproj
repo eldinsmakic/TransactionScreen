@@ -15,8 +15,9 @@
 		080EC27E287B1E3A00999C9D /* TransactionScreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EC255287B1E3900999C9D /* TransactionScreenApp.swift */; };
 		080EC281287B1E3A00999C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080EC257287B1E3A00999C9D /* Assets.xcassets */; };
 		080EC282287B1E3A00999C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080EC257287B1E3A00999C9D /* Assets.xcassets */; };
-		0855FEA0287CADD10044E518 /* TransactionScreenKit in Resources */ = {isa = PBXBuildFile; fileRef = 0855FE9F287CADD10044E518 /* TransactionScreenKit */; };
-		0855FEA2287CAE130044E518 /* TransactionScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0855FEA1287CAE130044E518 /* TransactionScreenKit */; };
+		0893E89B28C7E05D00BAA39B /* TransactionScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0893E89A28C7E05D00BAA39B /* TransactionScreenKit */; };
+		08A0F26428A13A42000C4DF2 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0F26328A13A42000C4DF2 /* SwiftUIView.swift */; };
+		08A0F26528A13A42000C4DF2 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A0F26328A13A42000C4DF2 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,8 @@
 		080EC275287B1E3A00999C9D /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		080EC279287B1E3A00999C9D /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		080EC27B287B1E3A00999C9D /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		0855FE9F287CADD10044E518 /* TransactionScreenKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TransactionScreenKit; path = Package/TransactionScreenKit; sourceTree = "<group>"; };
+		0893E89928C7E05000BAA39B /* TransactionScreenKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TransactionScreenKit; path = Package/TransactionScreenKit; sourceTree = "<group>"; };
+		08A0F26328A13A42000C4DF2 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0855FEA2287CAE130044E518 /* TransactionScreenKit in Frameworks */,
+				0893E89B28C7E05D00BAA39B /* TransactionScreenKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +104,7 @@
 			children = (
 				080EC255287B1E3900999C9D /* TransactionScreenApp.swift */,
 				080EC257287B1E3A00999C9D /* Assets.xcassets */,
+				08A0F26328A13A42000C4DF2 /* SwiftUIView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 		08D9C803287B3EE1000BD7A6 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				0855FE9F287CADD10044E518 /* TransactionScreenKit */,
+				0893E89928C7E05000BAA39B /* TransactionScreenKit */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 			);
 			name = "TransactionScreen (iOS)";
 			packageProductDependencies = (
-				0855FEA1287CAE130044E518 /* TransactionScreenKit */,
+				0893E89A28C7E05D00BAA39B /* TransactionScreenKit */,
 			);
 			productName = "TransactionScreen (iOS)";
 			productReference = 080EC25C287B1E3A00999C9D /* TransactionScreen.app */;
@@ -286,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0855FEA0287CADD10044E518 /* TransactionScreenKit in Resources */,
 				080EC281287B1E3A00999C9D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A0F26428A13A42000C4DF2 /* SwiftUIView.swift in Sources */,
 				080EC27D287B1E3A00999C9D /* TransactionScreenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A0F26528A13A42000C4DF2 /* SwiftUIView.swift in Sources */,
 				080EC27E287B1E3A00999C9D /* TransactionScreenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,7 +726,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0855FEA1287CAE130044E518 /* TransactionScreenKit */ = {
+		0893E89A28C7E05D00BAA39B /* TransactionScreenKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TransactionScreenKit;
 		};

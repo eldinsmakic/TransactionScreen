@@ -40,7 +40,7 @@ extension View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(.init())
+        Screen(.init())
             .modifier(AddButton(action: { print("hello")}))
     }
 }

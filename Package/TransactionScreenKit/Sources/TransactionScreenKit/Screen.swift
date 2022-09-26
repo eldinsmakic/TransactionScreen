@@ -8,9 +8,9 @@
 import SwiftUI
 import BudgetPlannerCore
 
-public struct MainView: View {
+public struct Screen: View {
     @ObservedObject var viewModel: ViewModel
-     
+
     public init(_ viewModel: ViewModel) {
         self.viewModel = viewModel
     }
@@ -79,9 +79,9 @@ public struct MainView: View {
 }
 
 struct TransationsVIew_Previews: PreviewProvider {
-//    static var injection = InjectionInit()
+    static var injection = InjectionInit()
     static var previews: some View {
-        MainView(.init())
+        Screen(.init())
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

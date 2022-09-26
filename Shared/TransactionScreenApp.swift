@@ -13,7 +13,7 @@ struct testApp: App {
     let injection = InjectionInit()
     var body: some Scene {
         WindowGroup {
-            MainView(ViewModel())
+            Screen(ViewModel())
         }
     }
 }  
